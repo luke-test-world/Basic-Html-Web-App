@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <!--everything goes inside the html tags-->
+<head>
+    <!--head contains information about the website and links to css or JS-->
+    <!-- a favicon is what is displayed in the tab, moving images do not work here-->
+    <link rel="icon" type="image/x-icon" href="imagepot/whatDog.webp">
+</head>
+<body>
+    <h3><a href="index.html">Main Page</a></h3>
+    <p> to put images on a page you use the img tag</p>
+    <!--you can reference images on the internet-->
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.goodhousekeeping.com%2Flife%2Fpets%2Fg4531%2Fcutest-dog-breeds%2F&psig=AOvVaw2OmmJ34pW56NqnEg6BHQJP&ust=1699974719864000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJjuq72hwYIDFQAAAAAdAAAAABAE"
+    alt="alt text is for if the image doesn't load, or for the blind">
+    <!--or you can reference local images-->
+    <img src="imagepot/doggo.png" alt="alt text is for if the image doesn't load, or for the blind" width="400" height="400">
+    <!--always include a height and width even if doing it later with CSS it will prevent the website constantly moving things around as it loads as the space will be reserved for this image-->
+    <!-- note it is generally bad form to do this with sizes in pixels-->
+    <img src="imagepot/whatDog.webp" alt="this is a webp image like a gif and are treated the same" width="400" height="400">
+
+    <p> we can make images responsive to things like the size of the screen. 
+        This is helpful because even though you can resize images with css making images responsive means that you can choose which image the browser downloads
+        for smaller screens that download smaller images this can improve performance size</p>
+    <p>here I have a set of images that I am going to choose from depending on the screen size</p>
+    <p> using a srcset allows us to give the images to pick from to the browser along with their size (width in this case)
+        and the browser will pick depending on configurable factors (in this case the view port width)
+    </p>
+    <!--note this will cash the largest image it gets to, so making the view window smaller will not switch back to the low res image-->
+    <img alt="alt text is for if the image doesn't load, or for the blind" 
+        srcset="imagepot/doggo192.png 192w,
+                imagepot/doggo320.png 320w,
+                imagepot/doggo854.png 854w,
+                imagepot/doggo1366.png 1366w,
+                imagepot/doggo1920.png 1920w"
+        sizes="(max-width: 600px) 320px,
+                (max-width: 1000px) 854px,
+                (max-width: 1800px) 1366px,
+                1920"
+        src="imagepot/doggo192.png"
+    />
+    <p> we can also use teh picture element to get more functionality
+        here the picture element is using a media query to choose between the images.
+        Using picture elements is good practice but you still have to support older browsers and include the default img
+    </p>
+    <figure>
+        <picture>
+            <source media="(min-width:600px)"
+                    srcset="imagepot/doggo1366.png 1366w">
+            <source srcset="imagepot/doggo192.png">
+            <img src="imagepot/doggo.png" alt="doggo">
+        </picture>
+        <figcaption>this is the caption for the image</figcaption>
+    </figure>
+    <p>above you can see that a caption is related to the image using the figure and figcaption tags.
+        Figures can be used for anything that needs captioning.
+    </p>
+</body>
+</html>

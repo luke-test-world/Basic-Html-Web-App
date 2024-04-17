@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h3><a href="index.html">Main Page</a></h3>
+    <p> we can use the audio element to embed audio files into a website</p>
+    <audio controls src="mediapot/Recording.mp3"></audio>
+    <p>the controls attribute tells the browser to supply the default play controls for the audio</p>
+    <p> we can add a video to a webpage in much the same way as audio</p>
+    <video controls src="mediapot/shortVid.mp4" width="500"></video>
+    <p>h.264 is the most common and best video compression thing maybe AV1?</p>
+    <p> we can also give videos captions as below by pointing to a text file</p>
+    <video controls width="500">
+        <source src="mediapot/shortVid.mp4">
+        <track src="mediapot/shortVideoCaptions.en.vtt" kind="captions" label="english" srclang="en" default>
+    </video>
+    <p> the video element is often a poor way to add video to a website. Often better to use an embed from a video streaming
+        service and take advantage of all the fancy variable bitrate compression stuff they do. See the below video from youtube</p>
+</body>
+</html>

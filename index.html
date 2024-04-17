@@ -1,0 +1,118 @@
+
+<!--this is an html comment and can be
+multiline-->
+<!DOCTYPE html>
+<!-- use the lang attribute to specify the language the website is in. useful for browsers and spellchecking-->
+<html lang="en-GB">
+    <!--everything goes inside the html tags-->
+<head>
+    <!--head contains information about the website and links to css or JS-->
+    <title>This is the title the browser sees, not part of the body</title>
+    <!-- this sets the fav icon that appears in the tab-->
+    <link rel="icon" href="imagepot/doggo192.png">
+    <!-- this tells the browser that it is a responsive website made to work on different size screens-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="here is some text about what the site is that can be picked up and displayed by search engines">
+</head>
+<body>
+    <!--in the body is where the contents of your website goes-->
+
+    <!--it is important to note that the main job of the tags is not to style text (this is usually done through css)
+    the tags tell browsers, screen readers, and CSS what type of thing the contents is allowing the other computer to 
+    process or style the contents-->
+
+    <!-- break the body into headers, footers, asides, and a main group to give the page some structure-->
+<header>
+    <h1>there are 6 levels of headlines h1 </h1>
+</header>
+
+<main>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+<p> paragraph text goes in p tags</p>
+<p> some text can be formatted by html tags, <b>bold</b> <em>emphasise</em> <i>italic</i></p>
+<!--this is an ordered list-->
+<ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ol>
+<!--this is an unordered list-->
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+<!--this is an description list-->
+<dl>
+    <dt>definition term 1
+        <dd>definition description 1.1</dd>
+        <dd>definition description 1.2</dd>
+    </dt>
+    <dt>definition term 2
+        <dd>definition description 2.1</dd>
+        <dd>definition description 2.2</dd>
+    </dt>
+    <dt>definition term 3
+        <dd>definition description 3.1</dd>
+        <dd>definition description 3.2</dd>
+    </dt>
+</dl>
+
+<p>you can also add <q>quotes</q></p>
+<p>you can add dates too and is given a specific attribute datetime in format YYYY-MM-DD</p>
+<p> you can use the code tag to write code <code>let x = 3</code></p>
+<!--elements like time can have attributes like datetime
+attributes are not displayed and are computer only-->
+<time datetime="2023-10-23">Oct 23</time>
+<p class="funParagraph"> Here the class attribute allows css styling of all elements with this same attribute</p>
+<p id="paragraphAABA"> id attribute is similar to class but is for a single element (often used with java script)</p>
+<p class="funParagraph" id="asdf">elements can have both a class and an id</p>
+
+<p> This is a </p> demonstration <p> of the paragraph <p> tag </p>.
+
+<!--aria roles allow you to make things accessible or hide thing to/from screen readers-->
+<ul aria-label="hello">
+    <div aria-hidden="true">
+        <li>h</li>
+        <li>e</li>
+        <li>l</li>
+        <li>l</li>
+        <li>o</li>
+    </div>
+</ul>
+
+<p>to ignore special characters you have to use character entities. for example to write &lt;p&gt; you have to write &amp;ltp&amp;gt meaning less than p greater than <br>
+there are a number of different special characters you can create this way including things like non breaking spaces &nbsp;</p>
+
+<p> when there is no good semantic choice to use you can use div's or span's (you can actually use these for all elements
+    but this can cause major issues for accessibility and browser and search engine understanding)
+</p>
+
+<div id="madeUp" class="customUnit">
+    <h3> some made up unit of content</h3>
+    <p> this header paragraph combo is wrapped in a div to make it easy to target</p>
+</div>
+</main>
+
+<footer>
+<nav role="navigation" aria-label="navigation links"> <!--navigation aria role for accessibility and name for screen reader-->
+    <h3>To learn more follow some of these links</h3>
+    <!--we can add links to move from place to place in or out of a website using the a tag-->
+    <ul>
+        <li><a href="images.html">Learn about images</a><!--access files within the website files with relative url--></li>
+        <li><a href="AudioAndVideo.html">Learn about audio and video</a><!--access files within the website files with relative url--></li>
+        <li><a href="Iframes.html">Learn how to embed I frames</a><!--access files within the website files with relative url--></li>
+        <li><a href="Forms.html">Learn how to use forms</a><!--access files within the website files with relative url--></li>
+        <li><a href="https://google.com">this is a link to google</a><!--absolute url--></li>
+        <li><a href="https://www.linkedin.com/learning/html-essential-training-4/links?resume=false&u=94030082">this is a link to the linkedin learning page used to create this webpage</a></li>
+    </ul>  
+</nav>
+</footer>
+
+
+</body>
+</html>
